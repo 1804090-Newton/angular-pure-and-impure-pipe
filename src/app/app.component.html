@@ -1,0 +1,9 @@
+<div class="container">
+  <input [(ngModel)]="searchText" type="text" name="" id="" placeholder="search User">
+  <button (click)="addUser()" >Add User</button>
+  <div *ngFor ="let user of users | filter:searchText "class="user">
+    <p>Name : {{user.name}}</p>
+
+  </div>
+
+</div>
